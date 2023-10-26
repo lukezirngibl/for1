@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.counter span {
+  color: white;
+  font-family: Arial;
+  font-size: 96px;
+}
