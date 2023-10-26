@@ -21,3 +21,18 @@ html::-webkit-scrollbar {
   font-family: Arial;
   font-size: 96px;
 }
+
+.active {
+  animation: fade 3s linear infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,22 +1,24 @@
 import { useEffect, useState } from 'react'
-import Static from './assets/img.jpg'
 import './App.css'
-import CountUp from 'react-countup'
 
 function App() {
   return (
     <>
-      <img
-        src={Static}
+      <video
+        src={'/slideshow.mp4'}
+        autoPlay
+        muted
+        loop
         style={{
           position: 'fixed',
+          opacity: 1,
           top: 0,
           left: 0,
           width: '100%',
           height: '100%',
           objectFit: 'cover',
         }}
-      ></img>
+      ></video>
     </>
   )
 }
