@@ -27,6 +27,17 @@ function App() {
 
   return (
     <>
+      <div
+        style={{
+          position: 'fixed',
+          opacity: 1,
+          top: 0,
+          left: 0,
+          zIndex: 10000,
+          width: '100vw',
+          height: '100vh',
+        }}
+      />
       <video
         src={'/slideshow.mp4'}
         autoPlay
