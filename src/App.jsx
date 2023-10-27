@@ -2,6 +2,29 @@ import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
+  const [isOn, setIsOn] = useState(true)
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const hours = new Date().getHours()
+      const minutes = new Date().getMinutes()
+      if (isOn && hours >= 23) {
+        setIsOn(false)
+      } else if (!isOn && hours >= 11 && minutes >= 30) {
+        setIsOn(true)
+        getDayData()
+      }
+    }, 60 * 30 * 1000)
+
+    return () => {
+      clearInterval(intervalId)
+    }
+  }, [isOn])
+
+  if (!isOn) {
+    return <div />
+  }
+
   return (
     <>
       <video
